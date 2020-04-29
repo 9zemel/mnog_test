@@ -12,3 +12,13 @@ live_near = {'john', 'vladislav', 'olga', 'mike', 'grant', 'covid', 'bilbo' }
 
 #  д/з объединить множество людей, которые живут и работают рядом
 # вывести множество людей, которые и владеют авто нужной марки, и живут и работают рядом
+
+live_and_work = live_near | work_near
+suspects = live_and_work & shevrole_owner
+suspects = list(suspects)
+a=[] #for numecir list
+print('В числе подозреваемых по делу об убийстве проходят следующие граждане: ')
+for i in range (len(suspects)):
+    a.append(i+1)
+    print("{}\t{}".format(a[i], suspects[i]))
+
